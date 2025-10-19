@@ -1,88 +1,177 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CoastBio Carbon Consultancy - Experts in Carbon Sinks, Biodiversity, and Marine Ecology</title>
-    <style>
-        body { font-family: 'Arial', sans-serif; margin: 0; padding: 0; color: #333; background: linear-gradient(to bottom, #e0f7fa, #b2ebf2); }
-        header { background: linear-gradient(to right, #007bff, #00bcd4); color: white; padding: 20px; text-align: center; position: relative; }
-        header::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 10px; background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none"><path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" fill="%23FFFFFF"></path><path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" fill="%23FFFFFF"></path><path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" fill="%23FFFFFF"></path></svg>') no-repeat center bottom; background-size: cover; }
-        nav { margin-top: 10px; }
-        nav a { color: white; margin: 0 15px; text-decoration: none; }
-        .hero { background: linear-gradient(rgba(0, 123, 255, 0.7), rgba(0, 188, 212, 0.7)), url('https://images.unsplash.com/photo-1505142468610-359e7d316be0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80'); background-size: cover; background-position: center; padding: 100px 20px; text-align: center; color: white; }
-        .section { padding: 50px 20px; max-width: 1200px; margin: 0 auto; }
-        .services { display: flex; justify-content: space-around; flex-wrap: wrap; }
-        .service { background: rgba(255, 255, 255, 0.9); padding: 20px; margin: 10px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); width: 30%; min-width: 250px; border-top: 5px solid #007bff; }
-        .contact { background: linear-gradient(to bottom, #e1f5fe, #b3e5fc); }
-        form { display: flex; flex-direction: column; max-width: 400px; margin: 0 auto; }
-        input, textarea { margin: 10px 0; padding: 10px; border: 1px solid #ccc; border-radius: 4px; }
-        button { background: linear-gradient(to right, #007bff, #00bcd4); color: white; padding: 10px; border: none; border-radius: 4px; cursor: pointer; }
-        footer { background: linear-gradient(to right, #007bff, #00bcd4); color: white; text-align: center; padding: 20px; position: relative; }
-        footer::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 10px; background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none"><path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" fill="%23FFFFFF"></path></svg>') no-repeat center top; background-size: cover; }
-        .qr-section { text-align: center; padding: 20px; background: rgba(255, 255, 255, 0.9); margin: 20px auto; max-width: 400px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
-        .qr-section img { max-width: 200px; height: auto; }
-    </style>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>CoastBio Carbon | Environmental Consultancy</title>
+<meta name="description" content="CoastBio Carbon helps councils, iwi partners, and companies plan and deliver nature-based projects: blue/green carbon, biodiversity, and marine ecology.">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Merriweather:wght@700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --deep-blue:#135D8C;
+    --sea-teal:#36A198;
+    --light-sea:#B8E3DE;
+    --bg:#f8fbfb;
+    --ink:#0e1f26;
+    --muted:#5b6b75;
+    --surface:#ffffff;
+    --line:#e2efec;
+    --radius:14px;
+    --shadow:0 10px 28px rgba(0,0,0,.08);
+    --max:1180px;
+  }
+  *{box-sizing:border-box}
+  html,body{height:100%}
+  body{margin:0;font:16px/1.6 Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg)}
+  a{color:var(--deep-blue);text-decoration:none}
+  a:focus,button:focus,input:focus,textarea:focus{outline:3px solid rgba(19,93,140,.3);outline-offset:2px}
+  h1,h2{font-family:Merriweather,Georgia,serif}
+  h2{font-size:clamp(22px,3vw,30px);margin:0 0 14px}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
+  .muted{color:var(--muted)}
+  .sr{position:absolute;left:-9999px}
+
+  /* Header */
+  .site-header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.96);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+  .nav{max-width:var(--max);margin:0 auto;padding:12px 18px;display:grid;grid-template-columns:220px 1fr 260px;align-items:center;gap:12px}
+  .brand{display:flex;align-items:center;gap:10px;color:inherit}
+  .brand img{height:36px;width:auto}
+  .brand-name{font-weight:800;letter-spacing:.2px}
+  .menu{display:flex;justify-content:center;align-items:center;gap:20px;color:#2a3a46;font-weight:600}
+  .menu a{color:#2a3a46;padding:8px 6px}
+  .menu .divider{width:1px;height:18px;background:#cfd9e0;display:inline-block}
+  .actions{display:flex;justify-content:flex-end;align-items:center;gap:14px}
+  .btn{display:inline-flex;align-items:center;justify-content:center;height:40px;padding:0 16px;border-radius:999px;font-weight:700;white-space:nowrap;cursor:pointer}
+  .btn-primary{background:linear-gradient(90deg,var(--deep-blue),var(--sea-teal));color:#fff;border:0;box-shadow:0 4px 10px rgba(0,0,0,.10);transition:.25s}
+  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 6px 16px rgba(0,0,0,.15)}
+  .btn-outline{background:#fff;color:var(--deep-blue);border:2px solid var(--deep-blue)}
+  .btn-outline:hover{background:#f2f8f7}
+
+  /* Hero */
+  .hero{position:relative;isolation:isolate;min-height:88vh;display:grid;place-items:center;text-align:center;color:#fff;
+    background:
+      linear-gradient(145deg, rgba(19,93,140,.72) 0%, rgba(54,161,152,.58) 75%),
+      url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1920&auto=format&fit=crop') center/cover no-repeat;
+  }
+  .hero-inner{max-width:1100px;padding:0 24px;margin-top:4vh}
+  h1{font-size:clamp(42px,9vw,112px);letter-spacing:.04em;margin:0 0 18px}
+  .tagline{font-size:clamp(16px,2.2vw,26px);background:rgba(255,255,255,.18);padding:8px 14px;border-radius:10px;display:inline-block}
+  .cta-hero{margin-top:34px}
+  .btn-ghost{display:inline-flex;align-items:center;justify-content:center;padding:12px 26px;border-radius:999px;font-weight:800;letter-spacing:.03em;color:#fff;background:rgba(255,255,255,.25);border:2px solid rgba(255,255,255,.45);backdrop-filter:blur(2px)}
+  .btn-ghost:hover{background:rgba(255,255,255,.32)}
+
+  section{padding:64px 0}
+  .grid{display:grid;gap:18px}
+  @media(min-width:840px){.cols-2{grid-template-columns:1fr 1fr}.cols-3{grid-template-columns:repeat(3,1fr)}}
+  .card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:22px;box-shadow:var(--shadow)}
+  .icon{width:40px;height:40px;border-radius:10px;background:#e8f5f3;color:var(--deep-blue);display:grid;place-items:center;margin-bottom:8px;font-size:20px}
+  .badge{font-size:.8rem;background:var(--light-sea);color:var(--deep-blue);padding:4px 10px;border-radius:999px;display:inline-block;margin-bottom:8px}
+
+  .steps{counter-reset:s}
+  .step{display:flex;gap:14px;align-items:flex-start}
+  .step:before{counter-increment:s;content:counter(s);width:28px;height:28px;border-radius:50%;background:var(--light-sea);color:var(--deep-blue);display:grid;place-items:center;font-weight:700;margin-top:4px}
+
+  /* Project images */
+  .project-img{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:12px;margin-bottom:10px;border:1px solid var(--line);box-shadow:var(--shadow)}
+
+  .contact{background:radial-gradient(1200px 300px at 50% -50%,rgba(54,161,152,.12),transparent),var(--bg)}
+  form{display:grid;gap:12px;max-width:640px}
+  input,textarea{width:100%;padding:12px 14px;border:1px solid #dce9e7;border-radius:10px;background:#fff;font:inherit}
+  button[type=submit]{border:0;background:linear-gradient(90deg,var(--deep-blue),var(--sea-teal));color:#fff;padding:12px 16px;border-radius:999px;font-weight:700;cursor:pointer;transition:.25s}
+  button[type=submit]:hover{opacity:.92}
+
+  footer{border-top:1px solid var(--line);background:#fff;color:var(--muted);padding:26px 0}
+</style>
 </head>
 <body>
-    <header>
-        <h1>CoastBio Carbon Consultancy</h1>
-        <nav>
-            <a href="#about">About</a>
-            <a href="#services">Services</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
 
-    <section class="hero">
-        <h2>Leading Environmental Consultancy for a Sustainable Future</h2>
-        <p>Specializing in Carbon Sinks, Biodiversity, and Marine Ecology to protect our planet.</p>
-        <a href="#contact"><button>Get Started</button></a>
-    </section>
+<header class="site-header">
+  <div class="nav">
+    <a class="brand" href="#top"><img src="logo.jpg" alt="CoastBio Carbon logo"><span class="brand-name">CoastBio&nbsp;Carbon</span></a>
+    <nav class="menu">
+      <a href="#about">About</a><span class="divider"></span>
+      <a href="#packages">Packages</a><span class="divider"></span>
+      <a href="#method">Method</a><span class="divider"></span>
+      <a href="#projects">Highlighted projects</a><span class="divider"></span>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="actions">
+      <a class="btn btn-primary" href="#contact">Start a project</a>
+      <a class="btn btn-outline" href="#learn">Learn more</a>
+    </div>
+  </div>
+</header>
 
-    <section id="about" class="section">
-        <h2>About Us</h2>
-        <p>CoastBio Carbon Consultancy is dedicated to advancing environmental sustainability through expert analysis and innovative solutions. Our team of specialists focuses on carbon sequestration, biodiversity conservation, and marine ecosystem protection to help businesses and governments achieve their green goals.</p>
-    </section>
+<section id="top" class="hero">
+  <div class="hero-inner">
+    <h1>CoastBio&nbsp;Carbon</h1>
+    <div class="tagline">Bringing together coastal systems, biodiversity, and carbon credits.</div>
+    <div class="cta-hero"><a class="btn-ghost" href="#learn">LEARN MORE</a></div>
+  </div>
+</section>
 
-    <section id="services" class="section">
-        <h2>Our Services</h2>
-        <div class="services">
-            <div class="service">
-                <h3>Carbon Sinks</h3>
-                <p>We assess and enhance natural carbon sequestration methods, including forests, wetlands, and coastal ecosystems, to combat climate change.</p>
-            </div>
-            <div class="service">
-                <h3>Biodiversity</h3>
-                <p>Our biodiversity experts conduct surveys, impact assessments, and restoration projects to preserve endangered species and habitats.</p>
-            </div>
-            <div class="service">
-                <h3>Marine Ecology</h3>
-                <p>We specialize in marine ecosystem monitoring, pollution control, and sustainable fisheries management to protect ocean health.</p>
-            </div>
-        </div>
-    </section>
+<section id="about" class="wrap">
+  <h2>About Us</h2>
+  <p>Our consultancy specialises in modelling of carbon sinks and biodiversity within complex marine environments. We use our expertise to advise corporate and public sector clients on the carbon and biodiversity system. We combine scientific understanding, cultural insight, and streamline modelling to deliver actionable, cost-effective results for environmental decision-making.</p>
+</section>
 
-    <section id="contact" class="section contact">
-        <h2>Contact Us</h2>
-        <p>Ready to make a difference? Reach out for a consultation.</p>
-        <form action="/submit" method="post">
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="Your Email" required>
-            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-            <button type="submit">Send Message</button>
-        </form>
-    </section>
+<section id="packages" class="wrap">
+  <h2>Service packages</h2>
+  <p class="muted">Choose a fast modelling study or a full programme with monitoring and ongoing guidance.</p>
+  <div class="grid cols-2">
+    <article class="card"><div class="icon">📊</div><h3>Modelling package</h3><p>Quick-turnaround desktop assessment using proven frameworks. Good for feasibility, grants, and option testing.</p><ul><li>Site-specific baseline with local data</li><li>2–4 pages of visual results and a short memo</li><li>Credit if you progress to the Complete package</li></ul></article>
+    <article class="card"><div class="icon">🌿</div><h3>Complete package</h3><p>End-to-end support with field campaigns, calibration, and reporting aligned to policy and crediting standards.</p><ul><li>MRV-ready plan and QA/QC steps</li><li>Stakeholder briefings and delivery roadmap</li><li>Implementation and long-term monitoring design</li></ul></article>
+  </div>
+</section>
 
-    <section class="qr-section">
-        <h3>Scan to Visit Our Landing Page</h3>
-        <p>Use your phone's camera or QR scanner to access our full site.</p>
-        <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https%3A//coastbio-carbon-consultancy.example.com" alt="QR Code to CoastBio Landing Page">
-        <p><small>Note: Replace the URL in the QR code with your actual hosted page URL.</small></p>
-    </section>
+<section id="method" class="wrap">
+  <h2>How we work</h2>
+  <div class="grid cols-3">
+    <article class="card"><div class="icon">🧭</div><h3>Tailored tools</h3><p>GIS, remote sensing, and dynamic models matched to your site. Analyses are reproducible and open for review.</p></article>
+    <article class="card"><div class="icon">✅</div><h3>Quality assured</h3><p>Peer review, template checks, and clear documentation of assumptions so decisions are well supported.</p></article>
+    <article class="card"><div class="icon">🤝</div><h3>Collaborative delivery</h3><p>We work with councils, iwi partners, and field experts across Aotearoa to keep work practical and accurate.</p></article>
+  </div>
+</section>
 
-    <footer>
-        <p>&copy; 2023 CoastBio Carbon Consultancy. All rights reserved.</p>
-    </footer>
+<!-- Highlighted Projects -->
+<section id="projects" class="wrap">
+  <h2>Highlighted projects</h2>
+  <div class="grid cols-3">
+    <article class="card"><img class="project-img" src="https://commons.wikimedia.org/wiki/Special:FilePath/Buffalo%20Beach,%20Whitianga.jpg?width=1200" alt="Buffalo Beach, Whitianga"><span class="badge">Coastal waves</span><h3>Buffalo Beach hindcast</h3><p><strong>Specialty:</strong> Extending nearshore records to support planning.</p><p><strong>Purpose:</strong> Provides a longer climate context for infrastructure resilience.</p><p><strong>Applicability:</strong> Coastal engineering and hazard screening.</p></article>
+
+    <article class="card"><img class="project-img" src="https://commons.wikimedia.org/wiki/Special:FilePath/Antarctica%20landscape%20(53118902865).jpg?width=1200" alt="Antarctic landscape"><span class="badge">Polar climate</span><h3>Antarctic AWS mapping</h3><p><strong>Specialty:</strong> Climate surfaces for station planning.</p><p><strong>Purpose:</strong> Reduces field uncertainty with reliable baseline data.</p><p><strong>Applicability:</strong> Polar logistics and environmental monitoring.</p></article>
+
+    <article class="card"><img class="project-img" src="https://commons.wikimedia.org/wiki/Special:FilePath/Zostera%20marina%202.jpg?width=1200" alt="Seagrass Zostera marina"><span class="badge">Seagrass</span><h3>Tauranga Harbour productivity</h3><p><strong>Specialty:</strong> Modelling growth under changing light and tide.</p><p><strong>Purpose:</strong> Identifies restoration zones with high recovery potential.</p><p><strong>Applicability:</strong> Restoration planning and impact assessments.</p></article>
+
+    <article class="card"><img class="project-img" src="https://commons.wikimedia.org/wiki/Special:FilePath/2017%20Port%20Hills%20fires%2015%20Feb.jpg?width=1200" alt="Wildfire New Zealand"><span class="badge">Wildfire</span><h3>Kūaotunu spread pathways</h3><p><strong>Specialty:</strong> Terrain-driven fire spread simulation.</p><p><strong>Purpose:</strong> Highlights at-risk corridors to inform readiness.</p><p><strong>Applicability:</strong> Emergency management and community planning.</p></article>
+
+    <article class="card"><img class="project-img" src="https://commons.wikimedia.org/wiki/Special:FilePath/Tilby%20Channel.jpg?width=1200" alt="Tauranga Harbour estuary"><span class="badge">Nutrients</span><h3>Tauranga nitrogen budget</h3><p><strong>Specialty:</strong> Simplified box-model of loads and fluxes.</p><p><strong>Purpose:</strong> Clarifies key controls for catchment planning.</p><p><strong>Applicability:</strong> Policy design and consent evaluation.</p></article>
+
+    <article class="card"><img class="project-img" src="https://commons.wikimedia.org/wiki/Special:FilePath/Ohiwa%20Harbour%2003.jpg?width=1200" alt="Ōhiwa Harbour"><span class="badge">Sediment</span><h3>Ōhiwa Harbour sediment study</h3><p><strong>Specialty:</strong> Mapping sources and sinks to target restoration.</p><p><strong>Purpose:</strong> Prioritises areas for greatest ecological gain.</p><p><strong>Applicability:</strong> Estuary rehabilitation and monitoring design.</p></article>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="wrap">
+    <h2>Contact</h2>
+    <p class="muted">Tell us about your site, goals, and timeframe. We’ll respond with a short plan and options.</p>
+    <form action="#" method="post">
+      <label><span class="sr">Name</span><input name="name" type="text" placeholder="Your name" required></label>
+      <label><span class="sr">Email</span><input name="email" type="email" placeholder="you@example.com" required></label>
+      <label><span class="sr">Message</span><textarea name="message" rows="6" placeholder="Project location, service needs, desired start date" required></textarea></label>
+      <button type="submit">Send message</button>
+      <p class="muted" style="font-size:.9rem">We will only use your details to reply.</p>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap" style="display:flex;gap:16px;justify-content:space-between;flex-wrap:wrap;">
+    <div>© <span id="y"></span> CoastBio Carbon</div>
+    <div><a href="#about">About</a> · <a href="#packages">Packages</a> · <a href="#method">Method</a> · <a href="#projects">Projects</a> · <a href="#contact">Contact</a></div>
+  </div>
+  <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+</footer>
+
 </body>
 </html>
