@@ -1,156 +1,192 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>CoastBio Carbon | Environmental Consultancy</title>
-<meta name="description" content="CoastBio Carbon helps councils, iwi partners, and companies plan and deliver nature-based projects: blue/green carbon, biodiversity, and marine ecology.">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Merriweather:wght@700&display=swap" rel="stylesheet">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CoastBio Carbon | Environmental Consultancy</title>
 
-<style>
-  :root{
-    --deep-blue:#135D8C;   /* ocean blue */
-    --sea-teal:#36A198;    /* teal-green */
-    --light-sea:#B8E3DE;   /* pale highlight */
-    --bg:#f8fbfb;
-    --ink:#0e1f26;
-    --muted:#5b6b75;
-    --surface:#ffffff;
-    --line:#e2efec;
-    --radius:14px;
-    --shadow:0 10px 28px rgba(0,0,0,.08);
-    --max:1180px;
-  }
+  <!-- Description & SEO -->
+  <meta name="description" content="Science-backed coastal, biodiversity, and blue carbon planning for councils, iwi partners, and companies across Aotearoa." />
+  <link rel="canonical" href="https://coastbiocarbon.github.io/coastbio-landing/" />
 
-  *{box-sizing:border-box}
-  html,body{height:100%}
-  body{margin:0;font:16px/1.6 Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg)}
-  a{color:var(--deep-blue);text-decoration:none}
-  a:focus,button:focus,input:focus,textarea:focus{outline:3px solid rgba(19,93,140,.3);outline-offset:2px}
-  h1,h2{font-family:Merriweather,Georgia,serif}
-  h2{font-size:clamp(24px,3vw,32px);margin:0 0 24px;font-weight:700}
-  h3{margin:0 0 12px;font-size:20px;font-weight:700}
-  .wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
-  .muted{color:var(--muted)}
-  .sr{position:absolute;left:-9999px}
+  <!-- Open Graph / Twitter -->
+  <meta property="og:title" content="CoastBio Carbon — Environmental Consultancy" />
+  <meta property="og:description" content="Nature-based solutions, biodiversity, and blue carbon planning." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://coastbiocarbon.github.io/coastbio-landing/" />
+  <meta property="og:image" content="https://coastbiocarbon.github.io/coastbio-landing/assets/og-cover.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
 
-  /* ======= Header (more breathing room) ======= */
-  .site-header{
-    position:sticky;top:0;z-index:100;
-    background:rgba(255,255,255,.98);
-    backdrop-filter:blur(6px);
-    border-bottom:1px solid var(--line);
-  }
-  .nav{
-    max-width:var(--max);
-    margin:0 auto;
-    padding:18px 28px;             /* more vertical + horizontal space */
-    display:flex; align-items:center; justify-content:space-between;
-    gap:32px;
-  }
-  .brand{display:flex;align-items:center;gap:14px;color:inherit}
-  .brand img{height:44px;width:auto} /* larger logo for balance */
-  .brand-name{font-weight:800;letter-spacing:.2px;font-size:1.05rem}
+  <!-- Favicons -->
+  <link rel="icon" href="assets/favicon-32.png" sizes="32x32">
+  <link rel="icon" href="assets/favicon-16.png" sizes="16x16">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 
-  .menu{flex:1;display:flex;align-items:center;justify-content:center;gap:28px;font-weight:600}
-  .menu a{color:var(--ink);padding:6px 0;transition:color .25s ease}
-  .menu a:hover{color:var(--deep-blue)}
-  .menu .divider{width:1px;height:18px;background:var(--line)}
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Merriweather:wght@700&display=swap" rel="stylesheet">
 
-  .actions{display:flex;align-items:center;gap:18px}
-  .btn{
-    display:inline-flex;align-items:center;justify-content:center;
-    height:44px;padding:0 22px;border-radius:999px;font-weight:700;white-space:nowrap;cursor:pointer;font-size:.95rem;
-  }
-  .btn-primary{
-    background:linear-gradient(90deg,var(--deep-blue),var(--sea-teal));
-    color:#fff;border:0;box-shadow:0 4px 10px rgba(0,0,0,.10);transition:.25s
-  }
-  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 6px 16px rgba(0,0,0,.15)}
-  .btn-outline{background:#fff;color:var(--deep-blue);border:2px solid var(--deep-blue)}
-  .btn-outline:hover{background:#f2f8f7}
+  <style>
+    :root {
+      /* Deep blue sea palette */
+      --deep-blue:#0e5a8a;     /* primary blue */
+      --deep-blue-2:#0a3d62;   /* darker blue for gradients/borders */
+      --sea-teal:#0e5a8a;      /* alias to blue so no teal remains */
+      --light-sea:#cfe3f5;     /* pale blue highlight */
+      --bg:#f6f9fc;            /* cooler background */
+      --ink:#0e1f26;
+      --muted:#5b6b75;
+      --surface:#ffffff;
+      --line:#e2efec;
+      --radius:14px;
+      --shadow:0 10px 28px rgba(0,0,0,.08);
+      --max:1180px;
+      --header-h:84px;
+    }
 
-  /* ======= Hero ======= */
-  .hero{
-    position:relative;isolation:isolate;
-    min-height:88vh;display:grid;place-items:center;text-align:center;color:#fff;
-    background:
-      linear-gradient(145deg, rgba(19,93,140,.72) 0%, rgba(54,161,152,.58) 75%),
-      url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1920&auto=format&fit=crop') center/cover no-repeat;
-  }
-  .hero-inner{max-width:1100px;padding:0 24px;margin-top:4vh}
-  h1{font-size:clamp(42px,9vw,112px);letter-spacing:.04em;margin:0 0 18px}
-  .tagline{font-size:clamp(16px,2.2vw,26px);background:rgba(255,255,255,.18);padding:10px 16px;border-radius:10px;display:inline-block}
-  .cta-hero{margin-top:36px}
-  .btn-ghost{
-    display:inline-flex;align-items:center;justify-content:center;
-    padding:12px 26px;border-radius:999px;font-weight:800;letter-spacing:.03em;
-    color:#fff;background:rgba(255,255,255,.25);border:2px solid rgba(255,255,255,.45);
-    backdrop-filter:blur(2px)
-  }
-  .btn-ghost:hover{background:rgba(255,255,255,.32)}
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font:16px/1.6 Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+      color:var(--ink);
+      background:var(--bg);
+    }
 
-  /* ======= Section spacing ======= */
-  section{padding:80px 0}                   /* more vertical rhythm */
-  .wrap > p{margin-top:0;margin-bottom:40px;color:var(--muted);max-width:70ch}
-  section + section{margin-top:40px;border-top:1px solid var(--line)}
+    a{color:var(--deep-blue);text-decoration:none}
+    a:focus,button:focus,input:focus,textarea:focus{outline:3px solid rgba(14,90,138,.30);outline-offset:2px}
+    h1,h2{font-family:Merriweather,Georgia,serif}
+    h2{font-size:clamp(24px,3vw,32px);margin:0 0 24px;font-weight:700}
+    h3{margin:0 0 12px;font-size:20px;font-weight:700}
+    .wrap{max-width:var(--max);margin:0 auto;padding:40px 30px}
+    .muted{color:var(--muted)}
 
-  /* Cards / grids */
-  .grid{display:grid;gap:18px}
-  @media(min-width:840px){.cols-2{grid-template-columns:1fr 1fr}.cols-3{grid-template-columns:repeat(3,1fr)}}
-  .card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:28px;box-shadow:var(--shadow)}
-  .icon{width:40px;height:40px;border-radius:10px;background:#e8f5f3;color:var(--deep-blue);display:grid;place-items:center;margin-bottom:8px;font-size:20px}
-  .badge{font-size:.8rem;background:var(--light-sea);color:var(--deep-blue);padding:4px 10px;border-radius:999px;display:inline-block;margin-bottom:8px}
+    /* ===== Header ===== */
+    .site-header{
+      position:sticky;top:0;z-index:100;
+      background:rgba(255,255,255,.98);
+      backdrop-filter:blur(6px);
+      border-bottom:1px solid var(--line);
+    }
+    .nav{
+      max-width:var(--max);
+      margin:0 auto;
+      padding:18px 28px;
+      display:flex;align-items:center;justify-content:space-between;
+      gap:32px;min-height:var(--header-h);
+    }
+    .brand{display:inline-flex;align-items:center;gap:12px;white-space:nowrap}
+    .brand img{height:44px;width:auto}
+    .brand-name{font-weight:800;letter-spacing:.2px;font-size:1.05rem}
+    .menu{flex:1;display:flex;align-items:center;justify-content:center;gap:28px;font-weight:600}
+    .menu a{color:var(--ink);padding:6px 0;transition:color .25s ease}
+    .menu a:hover{color:var(--deep-blue)}
+    .menu .divider{width:1px;height:18px;background:var(--line)}
+    .actions{display:flex;align-items:center;gap:18px}
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;
+      height:44px;padding:0 22px;border-radius:999px;font-weight:700;white-space:nowrap;
+      cursor:pointer;font-size:.95rem;transition:.18s ease;
+    }
+    /* Blue gradient buttons */
+    .btn-primary{
+      background:linear-gradient(90deg,var(--deep-blue-2),var(--deep-blue));
+      color:#fff;border:0;box-shadow:0 4px 10px rgba(0,0,0,.10)
+    }
+    .btn-primary:hover{transform:translateY(-2px);box-shadow:0 6px 16px rgba(0,0,0,.15)}
+    .btn-outline{background:#fff;color:var(--deep-blue-2);border:2px solid var(--deep-blue-2)}
+    .btn-outline:hover{background:#f2f7fc}
 
-  /* Steps */
-  .steps{counter-reset:s}
-  .step{display:flex;gap:14px;align-items:flex-start}
-  .step:before{counter-increment:s;content:counter(s);width:28px;height:28px;border-radius:50%;background:var(--light-sea);color:var(--deep-blue);display:grid;place-items:center;font-weight:700;margin-top:4px}
+    /* ===== Hero ===== */
+    .hero{
+      position:relative;isolation:isolate;
+      min-height:88vh;display:grid;place-items:center;text-align:center;color:#fff;
+      background-color:#0b3a5b; /* fallback */
+    }
+    @media (min-width:600px){
+      .hero{
+        background:
+          /* two-blues overlay */
+          linear-gradient(145deg, rgba(10,61,98,.72) 0%, rgba(14,90,138,.58) 75%),
+          url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1920&auto=format&fit=crop') center/cover no-repeat;
+      }
+    }
+    .hero-inner{max-width:1100px;padding:0 24px;margin-top:4vh}
+    h1{font-size:clamp(42px,9vw,112px);letter-spacing:.04em;margin:0 0 12px}
+    .subtitle{
+      font-family:Inter,sans-serif;
+      font-weight:600;
+      font-size:clamp(28px,2vw,24px);
+      color:#eaf7f6;
+      margin-top:-4px;
+      margin-bottom:24px;
+      letter-spacing:.5px;
+    }
+    .tagline{font-size:clamp(16px,2.2vw,26px);background:rgba(255,255,255,.18);padding:10px 16px;border-radius:10px;display:inline-block}
+    .cta-hero{margin-top:36px}
+    .btn-ghost{
+      display:inline-flex;align-items:center;justify-content:center;
+      padding:12px 26px;border-radius:999px;font-weight:800;letter-spacing:.03em;
+      color:#fff;background:rgba(255,255,255,.25);border:2px solid rgba(255,255,255,.45);
+      backdrop-filter:blur(2px)
+    }
+    .btn-ghost:hover{background:rgba(255,255,255,.32)}
 
-  /* Project images */
-  .project-img{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:12px;margin-bottom:12px;border:1px solid var(--line);box-shadow:var(--shadow)}
+    /* ===== Sections ===== */
+    section{padding:0}
+    .wrap>p{margin-top:0;margin-bottom:32px;color:var(--muted);max-width:70ch;text-align:justify}
+    section+section{margin-top:60px;border-top:1px solid var(--line)}
+    .grid{display:grid;gap:40px}
+    @media(min-width:840px){.cols-2{grid-template-columns:1fr 1fr}.cols-3{grid-template-columns:repeat(3,1fr)}}
+    .card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:28px;box-shadow:var(--shadow);transition:.18s ease}
+    .card:hover{transform:translateY(-4px);box-shadow:0 14px 28px rgba(0,0,0,.12)}
 
-  /* Contact */
-  .contact{background:radial-gradient(1200px 300px at 50% -50%,rgba(54,161,152,.12),transparent),var(--bg)}
-  form{display:grid;gap:12px;max-width:640px}
-  input,textarea{width:100%;padding:12px 14px;border:1px solid #dce9e7;border-radius:10px;background:#fff;font:inherit}
-  button[type=submit]{border:0;background:linear-gradient(90deg,var(--deep-blue),var(--sea-teal));color:#fff;padding:12px 16px;border-radius:999px;font-weight:700;cursor:pointer;transition:.25s}
-  button[type=submit]:hover{opacity:.92}
+    /* Chips/Badges in blue */
+    .icon{width:40px;height:40px;border-radius:10px;background:#e6f1f8;color:var(--deep-blue);display:grid;place-items:center;margin-bottom:8px;font-size:20px}
+    .badge{font-size:.8rem;background:var(--light-sea);color:var(--deep-blue-2);padding:4px 10px;border-radius:999px;display:inline-block;margin-bottom:8px}
 
-  /* Footer */
-  footer{border-top:1px solid var(--line);background:#fff;color:var(--muted);padding:30px 0}
-</style>
+    .project-img{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:12px;margin-bottom:12px;border:1px solid var(--line);box-shadow:var(--shadow)}
+
+    /* Contact (blue glow instead of teal) */
+    .contact{
+      background:
+        radial-gradient(1200px 300px at 50% -50%, rgba(14,90,138,.12), transparent),
+        var(--bg);
+    }
+    form{display:grid;gap:12px;max-width:640px}
+    input,textarea{width:100%;padding:12px 14px;border:1px solid #dce9e7;border-radius:10px;background:#fff;font:inherit}
+    button[type=submit]{border:0;background:linear-gradient(90deg,var(--deep-blue-2),var(--deep-blue));color:#fff;padding:12px 16px;border-radius:999px;font-weight:700;cursor:pointer;transition:.25s}
+    button[type=submit]:hover{opacity:.92}
+
+    footer{border-top:1px solid var(--line);background:#fff;color:var(--muted);padding:30px 0}
+  </style>
 </head>
 <body>
 
-<!-- ===== Header ===== -->
 <header class="site-header">
   <div class="nav">
-    <a class="brand" href="#top">
-      <img src="logo.jpg" alt="CoastBio Carbon logo">
-      <span class="brand-name">CoastBio Carbon</span>
-    </a>
-
-    <nav class="menu" aria-label="Primary">
+    <a class="brand" href="#top"><img src="assets/logo.jpg" alt="CoastBio Carbon logo"><span class="brand-name">CoastBio Carbon</span></a>
+    <nav class="menu">
       <a href="#about">About</a><span class="divider"></span>
       <a href="#packages">Packages</a><span class="divider"></span>
       <a href="#method">Method</a><span class="divider"></span>
-      <a href="#projects">Highlighted projects</a><span class="divider"></span>
+      <a href="#projects">Highlighted Projects</a><span class="divider"></span>
       <a href="#contact">Contact</a>
     </nav>
-
     <div class="actions">
-      <a class="btn btn-primary" href="#contact">Start a project</a>
-      <a class="btn btn-outline" href="#learn">Learn more</a>
+      <a class="btn btn-primary" href="#contact">Start a Project</a>
+      <a class="btn btn-outline" href="#learn">Learn More</a>
     </div>
   </div>
 </header>
 
 <!-- ===== Hero ===== -->
-<section id="top" class="hero" role="banner" aria-label="CoastBio Carbon hero">
+<section id="top" class="hero">
   <div class="hero-inner">
     <h1>CoastBio&nbsp;Carbon</h1>
-    <div class="tagline">Bringing together coastal systems, biodiversity, and carbon credits.</div>
+    <h2 class="subtitle">Environmental Consultancy</h2>
+    <div class="tagline">Bringing together coastal systems, biodiversity, and carbon credits</div>
     <div class="cta-hero"><a class="btn-ghost" href="#learn">LEARN MORE</a></div>
   </div>
 </section>
@@ -160,18 +196,18 @@
 <!-- ===== About ===== -->
 <section id="about" class="wrap">
   <h2>About Us</h2>
-  <p>Our consultancy specialises in modelling of carbon sinks and biodiversity within complex marine environments. We use our expertise to advise corporate and public sector clients on the carbon and biodiversity system. We combine scientific understanding, cultural insight, and streamline modelling to deliver actionable, cost-effective results for environmental decision-making.</p>
+  <p>Our consultancy specialises in modelling of carbon sinks and biodiversity within complex marine environments. We use our expertise to advise corporate and public sector clients on the carbon and biodiversity system. We combine scientific understanding, cultural insight, and streamline modelling to deliver actionable, cost-effective results for environmental decision-making. We also committed to achieving marine resilience and supporting climate adaptation through enhancing and combining insights of blue carbon with maritime ecology.</p>
 </section>
 
 <!-- ===== Packages ===== -->
 <section id="packages" class="wrap">
-  <h2>Service packages</h2>
+  <h2>Packages</h2>
   <p class="muted">Choose a fast modelling study or a full programme with monitoring and ongoing guidance.</p>
   <div class="grid cols-2">
     <article class="card">
       <div class="icon">📊</div>
-      <h3>Modelling package</h3>
-      <p>Quick-turnaround desktop assessment using proven frameworks. Good for feasibility, grants, and option testing.</p>
+      <h3>Modelling Package</h3>
+      <p>We provide you quick-turnaround desktop assessment using proven frameworks. Good for feasibility, grants, and option testing.</p>
       <ul>
         <li>Site-specific baseline with local data</li>
         <li>2–4 pages of visual results and a short memo</li>
@@ -180,8 +216,8 @@
     </article>
     <article class="card">
       <div class="icon">🌿</div>
-      <h3>Complete package</h3>
-      <p>End-to-end support with field campaigns, calibration, and reporting aligned to policy and crediting standards.</p>
+      <h3>Complete Package</h3>
+      <p>Providing end-to-end support with field campaigns, calibration, and reporting aligned to policy and crediting standards.</p>
       <ul>
         <li>MRV-ready plan and QA/QC steps</li>
         <li>Stakeholder briefings and delivery roadmap</li>
@@ -195,65 +231,65 @@
 <section id="method" class="wrap">
   <h2>How we work</h2>
   <div class="grid cols-3">
-    <article class="card"><div class="icon">🧭</div><h3>Tailored tools</h3><p>GIS, remote sensing, and dynamic models matched to your site. Analyses are reproducible and open for review.</p></article>
-    <article class="card"><div class="icon">✅</div><h3>Quality assured</h3><p>Peer review, template checks, and clear documentation of assumptions so decisions are well supported.</p></article>
-    <article class="card"><div class="icon">🤝</div><h3>Collaborative delivery</h3><p>We work with councils, iwi partners, and field experts across Aotearoa to keep work practical and accurate.</p></article>
+    <article class="card"><div class="icon">🧭</div><h3>Tailored Tools</h3><p>GIS, remote sensing, and dynamic models matched to your site. Analyses are reproducible and open for review.</p></article>
+    <article class="card"><div class="icon">✅</div><h3>Quality Assured</h3><p>Peer review, template checks, and clear documentation of assumptions so decisions are well supported.</p></article>
+    <article class="card"><div class="icon">🤝</div><h3>Collaborative</h3><p>We work with councils, iwi partners, and field experts across Aotearoa to keep work practical and accurate.</p></article>
   </div>
 </section>
 
-<!-- ===== Highlighted Projects (with working Wikimedia URLs) ===== -->
+<!-- ===== Highlighted Projects ===== -->
 <section id="projects" class="wrap">
-  <h2>Highlighted projects</h2>
+  <h2>Highlighted Projects</h2>
   <div class="grid cols-3">
     <article class="card">
-      <img class="project-img" src="https://commons.wikimedia.org/wiki/Special:FilePath/Buffalo%20Beach,%20Whitianga.jpg?width=1200" alt="Buffalo Beach, Whitianga" loading="lazy" decoding="async">
-      <span class="badge">Coastal waves</span>
-      <h3>Buffalo Beach hindcast</h3>
+      <img class="project-img" src="https://commons.wikimedia.org/wiki/Special:FilePath/Buffalo%20Beach,%20Whitianga.jpg?width=1200" alt="Buffalo Beach, Whitianga">
+      <span class="badge">Coastal</span>
+      <h3>Buffalo Beach Wave Hindcast</h3>
       <p><strong>Specialty:</strong> Extending nearshore records to support planning.</p>
       <p><strong>Purpose:</strong> Provides a longer climate context for infrastructure resilience.</p>
       <p><strong>Applicability:</strong> Coastal engineering and hazard screening.</p>
     </article>
 
     <article class="card">
-      <img class="project-img" src="https://commons.wikimedia.org/wiki/Special:FilePath/Antarctica%20landscape%20(53118902865).jpg?width=1200" alt="Antarctic landscape" loading="lazy" decoding="async">
-      <span class="badge">Polar climate</span>
-      <h3>Antarctic AWS mapping</h3>
-      <p><strong>Specialty:</strong> Climate surfaces for station planning.</p>
+      <img class="project-img" src="https://commons.wikimedia.org/wiki/Special:FilePath/Antarctica%20landscape%20(53118902865).jpg?width=1200" alt="Antarctic landscape">
+      <span class="badge">Climate</span>
+      <h3>Antarctic Station Temperature Hindcast</h3>
+      <p><strong>Specialty:</strong> Identifying surface temperature patterns.</p>
       <p><strong>Purpose:</strong> Reduces field uncertainty with reliable baseline data.</p>
-      <p><strong>Applicability:</strong> Polar logistics and environmental monitoring.</p>
+      <p><strong>Applicability:</strong> Logistics planning and environmental monitoring.</p>
     </article>
 
     <article class="card">
-      <img class="project-img" src="https://commons.wikimedia.org/wiki/Special:FilePath/Zostera%20marina%202.jpg?width=1200" alt="Underwater seagrass meadow (Zostera marina)" loading="lazy" decoding="async">
+      <img class="project-img" src="https://commons.wikimedia.org/wiki/Special:FilePath/Zostera%20marina%202.jpg?width=1200" alt="Underwater seagrass meadow">
       <span class="badge">Seagrass</span>
-      <h3>Tauranga Harbour productivity</h3>
+      <h3>Tauranga Harbour Seagrass Productivity</h3>
       <p><strong>Specialty:</strong> Modelling growth under changing light and tide.</p>
       <p><strong>Purpose:</strong> Identifies restoration zones with high recovery potential.</p>
       <p><strong>Applicability:</strong> Restoration planning and impact assessments.</p>
     </article>
 
     <article class="card">
-      <img class="project-img" src="https://commons.wikimedia.org/wiki/Special:FilePath/2017%20Port%20Hills%20fires%2015%20Feb.jpg?width=1200" alt="Wildfire in New Zealand (Port Hills)" loading="lazy" decoding="async">
-      <span class="badge">Wildfire</span>
-      <h3>Kūaotunu spread pathways</h3>
+      <img class="project-img" src="https://commons.wikimedia.org/wiki/Special:FilePath/2017%20Port%20Hills%20fires%2015%20Feb.jpg?width=1200" alt="Wildfire in New Zealand">
+      <span class="badge">Hazards</span>
+      <h3>Kūaotunu Wildfire Spread Pathways</h3>
       <p><strong>Specialty:</strong> Terrain-driven fire spread simulation.</p>
       <p><strong>Purpose:</strong> Highlights at-risk corridors to inform readiness.</p>
       <p><strong>Applicability:</strong> Emergency management and community planning.</p>
     </article>
 
     <article class="card">
-      <img class="project-img" src="https://commons.wikimedia.org/wiki/Special:FilePath/Tilby%20Channel.jpg?width=1200" alt="Tilby Channel, Tauranga Harbour" loading="lazy" decoding="async">
+      <img class="project-img" src="https://commons.wikimedia.org/wiki/Special:FilePath/Tilby%20Channel.jpg?width=1200" alt="Tilby Channel, Tauranga Harbour">
       <span class="badge">Nutrients</span>
-      <h3>Tauranga nitrogen budget</h3>
+      <h3>Tauranga Harbour Nitrogen Accounting</h3>
       <p><strong>Specialty:</strong> Simplified box-model of loads and fluxes.</p>
       <p><strong>Purpose:</strong> Clarifies key controls for catchment planning.</p>
       <p><strong>Applicability:</strong> Policy design and consent evaluation.</p>
     </article>
 
     <article class="card">
-      <img class="project-img" src="https://commons.wikimedia.org/wiki/Special:FilePath/Ohiwa%20Harbour%2003.jpg?width=1200" alt="Ōhiwa Harbour, Bay of Plenty" loading="lazy" decoding="async">
+      <img class="project-img" src="https://commons.wikimedia.org/wiki/Special:FilePath/Ohiwa%20Harbour%2003.jpg?width=1200" alt="Ōhiwa Harbour, Bay of Plenty">
       <span class="badge">Sediment</span>
-      <h3>Ōhiwa Harbour sediment study</h3>
+      <h3>Ōhiwa Harbour Sediment Transfer</h3>
       <p><strong>Specialty:</strong> Mapping sources and sinks to target restoration.</p>
       <p><strong>Purpose:</strong> Prioritises areas for greatest ecological gain.</p>
       <p><strong>Applicability:</strong> Estuary rehabilitation and monitoring design.</p>
@@ -266,6 +302,7 @@
   <div class="wrap">
     <h2>Contact</h2>
     <p class="muted">Tell us about your site, goals, and timeframe. We’ll respond with a short plan and options.</p>
+    <!-- To wire this up, replace action with your Formspree endpoint -->
     <form action="#" method="post" aria-label="Contact form">
       <label><span class="sr">Name</span><input name="name" type="text" placeholder="Your name" required></label>
       <label><span class="sr">Email</span><input name="email" type="email" placeholder="you@example.com" required></label>
