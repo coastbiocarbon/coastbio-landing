@@ -29,11 +29,10 @@
   <style>
     :root {
       /* Deep blue sea palette */
-      --deep-blue:#0e5a8a;     /* primary blue */
-      --deep-blue-2:#0a3d62;   /* darker blue for gradients/borders */
-      --sea-teal:#0e5a8a;      /* alias to blue so no teal remains */
-      --light-sea:#cfe3f5;     /* pale blue highlight */
-      --bg:#f6f9fc;            /* cooler background */
+      --deep-blue:#0e5a8a;
+      --deep-blue-2:#0a3d62;
+      --light-sea:#cfe3f5;
+      --bg:#f6f9fc;
       --ink:#0e1f26;
       --muted:#5b6b75;
       --surface:#ffffff;
@@ -61,6 +60,7 @@
     h3{margin:0 0 12px;font-size:20px;font-weight:700}
     .wrap{max-width:var(--max);margin:0 auto;padding:40px 30px}
     .muted{color:var(--muted)}
+    .sr{position:absolute;left:-9999px}
 
     /* ===== Header ===== */
     .site-header{
@@ -89,7 +89,6 @@
       height:44px;padding:0 22px;border-radius:999px;font-weight:700;white-space:nowrap;
       cursor:pointer;font-size:.95rem;transition:.18s ease;
     }
-    /* Blue gradient buttons */
     .btn-primary{
       background:linear-gradient(90deg,var(--deep-blue-2),var(--deep-blue));
       color:#fff;border:0;box-shadow:0 4px 10px rgba(0,0,0,.10)
@@ -102,26 +101,16 @@
     .hero{
       position:relative;isolation:isolate;
       min-height:88vh;display:grid;place-items:center;text-align:center;color:#fff;
-      background-color:#0b3a5b; /* fallback */
-    }
-    @media (min-width:600px){
-      .hero{
-        background:
-          /* two-blues overlay */
-          linear-gradient(145deg, rgba(10,61,98,.72) 0%, rgba(14,90,138,.58) 75%),
-          url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1920&auto=format&fit=crop') center/cover no-repeat;
-      }
+      background:
+        linear-gradient(145deg, rgba(10,61,98,.72) 0%, rgba(14,90,138,.58) 75%),
+        url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1920&auto=format&fit=crop') center/cover no-repeat;
+      overflow:hidden;
     }
     .hero-inner{max-width:1100px;padding:0 24px;margin-top:4vh}
     h1{font-size:clamp(42px,9vw,112px);letter-spacing:.04em;margin:0 0 12px}
     .subtitle{
-      font-family:Inter,sans-serif;
-      font-weight:600;
-      font-size:clamp(28px,2vw,24px);
-      color:#eaf7f6;
-      margin-top:-4px;
-      margin-bottom:24px;
-      letter-spacing:.5px;
+      font-family:Inter,sans-serif;font-weight:600;
+      font-size:clamp(28px,2vw,24px);color:#eaf7f6;margin-top:-4px;margin-bottom:24px
     }
     .tagline{font-size:clamp(16px,2.2vw,26px);background:rgba(255,255,255,.18);padding:10px 16px;border-radius:10px;display:inline-block}
     .cta-hero{margin-top:36px}
@@ -131,7 +120,6 @@
       color:#fff;background:rgba(255,255,255,.25);border:2px solid rgba(255,255,255,.45);
       backdrop-filter:blur(2px)
     }
-    .btn-ghost:hover{background:rgba(255,255,255,.32)}
 
     /* ===== Sections ===== */
     section{padding:0}
@@ -141,14 +129,11 @@
     @media(min-width:840px){.cols-2{grid-template-columns:1fr 1fr}.cols-3{grid-template-columns:repeat(3,1fr)}}
     .card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:28px;box-shadow:var(--shadow);transition:.18s ease}
     .card:hover{transform:translateY(-4px);box-shadow:0 14px 28px rgba(0,0,0,.12)}
-
-    /* Chips/Badges in blue */
     .icon{width:40px;height:40px;border-radius:10px;background:#e6f1f8;color:var(--deep-blue);display:grid;place-items:center;margin-bottom:8px;font-size:20px}
     .badge{font-size:.8rem;background:var(--light-sea);color:var(--deep-blue-2);padding:4px 10px;border-radius:999px;display:inline-block;margin-bottom:8px}
-
     .project-img{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:12px;margin-bottom:12px;border:1px solid var(--line);box-shadow:var(--shadow)}
 
-    /* Contact (blue glow instead of teal) */
+    /* ===== Contact ===== */
     .contact{
       background:
         radial-gradient(1200px 300px at 50% -50%, rgba(14,90,138,.12), transparent),
@@ -158,6 +143,18 @@
     input,textarea{width:100%;padding:12px 14px;border:1px solid #dce9e7;border-radius:10px;background:#fff;font:inherit}
     button[type=submit]{border:0;background:linear-gradient(90deg,var(--deep-blue-2),var(--deep-blue));color:#fff;padding:12px 16px;border-radius:999px;font-weight:700;cursor:pointer;transition:.25s}
     button[type=submit]:hover{opacity:.92}
+
+    /* Success banner */
+    .notice {
+      display:none;
+      background:#e6f3ff;
+      color:#0a3d62;
+      border:1px solid #c7e0ff;
+      padding:12px 14px;
+      border-radius:12px;
+      margin:16px 0 0;
+      font-weight:600;
+    }
 
     footer{border-top:1px solid var(--line);background:#fff;color:var(--muted);padding:30px 0}
   </style>
@@ -297,18 +294,37 @@
   </div>
 </section>
 
-<!-- ===== Contact ===== -->
+<!-- ===== Contact (sends email via FormSubmit) ===== -->
 <section id="contact" class="contact">
   <div class="wrap">
     <h2>Contact</h2>
     <p class="muted">Tell us about your site, goals, and timeframe. We’ll respond with a short plan and options.</p>
-    <!-- To wire this up, replace action with your Formspree endpoint -->
-    <form action="#" method="post" aria-label="Contact form">
-      <label><span class="sr">Name</span><input name="name" type="text" placeholder="Your name" required></label>
-      <label><span class="sr">Email</span><input name="email" type="email" placeholder="you@example.com" required></label>
-      <label><span class="sr">Message</span><textarea name="message" rows="6" placeholder="Project location, service needs, desired start date" required></textarea></label>
+
+    <!-- FormSubmit: sends emails to coastbiocarbon@gmail.com -->
+    <form id="contact-form"
+          action="https://formsubmit.co/coastbiocarbon@gmail.com"
+          method="POST" aria-label="Contact form">
+      <label><span class="sr">Name</span>
+        <input name="name" type="text" placeholder="Your name" required>
+      </label>
+      <label><span class="sr">Email</span>
+        <input name="email" type="email" placeholder="you@example.com" required>
+      </label>
+      <label><span class="sr">Message</span>
+        <textarea name="message" rows="6" placeholder="Project location, service needs, desired start date" required></textarea>
+      </label>
+
+      <!-- FormSubmit options -->
+      <input type="hidden" name="_subject" value="New message from CoastBio Carbon website">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_captcha" value="false">
+      <!-- redirect back to same page with ?sent=1 -->
+      <input type="hidden" name="_next" value="https://coastbiocarbon.github.io/coastbio-landing/code.html?sent=1#contact">
+
       <button type="submit">Send message</button>
       <p class="muted" style="font-size:.9rem">We will only use your details to reply.</p>
+
+      <div id="notice" class="notice">Thanks — your message has been sent. We’ll get back to you soon.</div>
     </form>
   </div>
 </section>
@@ -318,7 +334,22 @@
     <div>© <span id="y"></span> CoastBio Carbon</div>
     <div><a href="#about">About</a> · <a href="#packages">Packages</a> · <a href="#method">Method</a> · <a href="#projects">Highlighted projects</a> · <a href="#contact">Contact</a></div>
   </div>
-  <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+  <script>
+    // year
+    document.getElementById('y').textContent = new Date().getFullYear();
+
+    // show success banner if redirected with ?sent=1
+    (function(){
+      const params = new URLSearchParams(location.search);
+      if(params.get('sent') === '1'){
+        const el = document.getElementById('notice');
+        if(el){ el.style.display = 'block'; }
+        // clean the URL so ?sent=1 disappears on refresh
+        const clean = location.href.replace(/([?&])sent=1(&|#|$)/, '$1').replace(/[?&]$/, '');
+        history.replaceState({}, '', clean);
+      }
+    })();
+  </script>
 </footer>
 
 </body>
